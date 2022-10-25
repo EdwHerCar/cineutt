@@ -1,0 +1,254 @@
+HTML {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #ab0000;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ticket {
+  width: 400px;
+  height: 775px;
+  background-color: white;
+  margin: 25px auto;
+  position: relative;
+}
+
+.holes-top {
+  height: 50px;
+  width: 50px;
+  background-color: #ab0000;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+  top: -25px;
+}
+.holes-top:before, .holes-top:after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  background-color: #ab0000;
+  position: absolute;
+  border-radius: 50%;
+}
+.holes-top:before {
+  left: -200px;
+}
+.holes-top:after {
+  left: 200px;
+}
+
+.holes-lower {
+  position: relative;
+  margin: 25px;
+  border: 1px dashed #aaa;
+}
+.holes-lower:before, .holes-lower:after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  background-color: #ab0000;
+  position: absolute;
+  border-radius: 50%;
+}
+.holes-lower:before {
+  top: -25px;
+  left: -50px;
+}
+.holes-lower:after {
+  top: -25px;
+  left: 350px;
+}
+
+.title {
+  padding: 50px 25px 10px;
+}
+
+.cinema {
+  color: #aaa;
+  font-size: 22px;
+}
+
+.movie-title {
+  font-size: 50px;
+}
+
+.info {
+  padding: 15px 25px;
+}
+
+table {
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+table tr {
+  margin-bottom: 10px;
+}
+table th {
+  text-align: left;
+}
+table th:nth-of-type(1) {
+  width: 38%;
+}
+table th:nth-of-type(2) {
+  width: 40%;
+}
+table th:nth-of-type(3) {
+  width: 15%;
+}
+table td {
+  width: 33%;
+  font-size: 32px;
+}
+
+.bigger {
+  font-size: 48px;
+}
+
+.serial {
+  padding: 25px;
+}
+.serial table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+.serial td {
+  width: 3px;
+  height: 50px;
+}
+
+.numbers td {
+  font-size: 16px;
+  text-align: center;
+}
+
+.screenboard {
+  color: #000;
+  display: inline-block;
+  line-height: 1;
+  margin: 7em 0 10em 0;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 350px;
+  z-index: 0;
+}
+
+.screenboard::before,
+.screenboard::after {
+  border: 2px outset #f00;
+  bottom: 50%;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.75);
+  content: "";
+  position: absolute;
+  z-index: -2;
+}
+
+.screenboard::before {
+  left: 0.5em;
+  right: 0.5em;
+  top: 0.5em;
+}
+
+.screenboard::after {
+  left: 1em;
+  right: 1em;
+  top: 1em;
+}
+
+.screenboard-screenname {
+  background-color: #ffc;
+  border: 5px outset #f00;
+  border-radius: 0.5em 0.5em 0 0;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.75);
+  display: block;
+  font-family: "Teko", sans-serif;
+  font-size: 2em;
+  margin: 1.25em 0.75em -5px;
+  padding: 0.25em;
+  position: relative;
+}
+
+.screenboard-screenname::before,
+.screenboard-screenname::after {
+  background-color: #ffc;
+  border: 5px outset #f00;
+  border-radius: 0.5em 0.5em 0 0;
+  bottom: -5px;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.75);
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+
+.screenboard-screenname::before {
+  height: 2.5em;
+  margin-right: -1.5em;
+  right: 50%;
+  width: 3em;
+}
+
+.screenboard-screenname::after {
+  height: 3em;
+  left: 50%;
+  margin-left: -0.5em;
+  width: 1em;
+}
+
+.movielist {
+  background-color: #ffc;
+  border: 5px outset #f00;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.75);
+  font-family: "Roboto Condensed", sans-serif;
+  list-style-type: none;
+  padding: 1em 0;
+  position: relative;
+  margin: 0;
+  z-index: 1;
+}
+
+.movielist-movie {
+  list-style-type: none;
+  margin: 0;
+  padding: 0.5em 0 0;
+}
+
+.movielist-movie:first-child {
+  padding: 0;
+}
+
+.movielist-movie-title,
+.movielist-movie-desc {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  height: 0.5em;
+  margin-bottom: 0.75em;
+  margin-top: 0.75em;
+}
+
+.movielist-movie-title {
+  font-size: 1.5em;
+}
+
+.movielist-movie-title SPAN,
+.movielist-movie-desc SPAN {
+  display: block;
+  margin-top: -0.25em;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+}
